@@ -1,0 +1,54 @@
+name	info	bytes	dec	reg	io
+V-SET	Voltage setting 	2	2	0x0000	1
+I-SET	Current setting 	2	3	0x0001	1
+VOUT	Current setting 	2	2	0x0002	0
+IOUT	Output current display value 	2	3	0x0003	0
+POWER	Output power display value 	2	2	0x0004	0
+UIN	Input voltage display value 	2	2	0x0005	0
+AH-LOW	Output AH Low 16-bit output 	2	0	0x0006	0
+AH-HIGH	AH High 16-bit output WH 	2	0	0x0007	0
+WH-LOW	Low 16-bit output WH High 	2	0	0x0008	0
+WH-HIGH	16-bit on time - hour start 	2	0	0x0009	0
+OUT_H	time - minute on time 	2	0	0x000A	0
+OUT_M	-Seconds internal 	2	0	0x000B	0
+OUT_S	temperature value 	2	0	0x000C	0
+T_IN	external temperature 	2	1	0x000D	0
+T_EX	value key lock 	2	1	0x000E	0
+LOCK	protection 	2	0	0x000F	1
+PROTECT	status constant 	2	0	0x0010	1
+CVCC	voltage constant current 	2	0	0x0011	0
+ONOFF	status switch 	2	0	0x0012	1
+FC	T in F or C	2	0	0x0013	1
+B-LED	backlight (1-5) 	2	0	0x0014	1
+SLEEP	backlight 	2	0	0x0015	1
+MODEL	model id 	2	0	0x0016	0
+VERSION	fw version 	2	0	0x0017	0
+SLAVE-ADD	device addr 	2	0	0x0018	1
+BAUDRATE_L	baudrate 0-6 	2	0	0x0019	1
+T-IN-OFFSET	T-IN offset 	2	1	0x001A	1
+T-EX-OFFSET	T-EX offset 	2	1	0x001B	1
+BUZZER	beeper on off 	2	0	0x001C	1
+EXTRACT-M	presets 0-10 	2	0	0x001D	1
+DEVICE	temperature correction buzzer switch quick adjus	2	0	0x001E	1
+MPPT-SW	MPPT switch 	2	0	0x001F	1
+MPPT-K	MPPT maximum power point coefficient 	2	0	0x0020	1
+BAT-FUL	full power cut-off current 	2	0	0x0021	1
+CW-SW	constant power switch 	2	0	0x0022	1
+CW	constant power value 	2	0	0x0023	1
+S-V-SET	Voltage setting 	2	2	0x0050	1
+S-I-SET	Current setting 	2	3	0x0051	1
+S-LVP	Low voltage protection 	2	2	0x0052	1
+S-OVP	value Overvoltage 	2	2	0x0053	1
+S-OCP	protection value 	2	3	0x0054	1
+S-OPP	Overcurrent protection 	2	1	0x0055	1
+S-OHP_H	value Overpower protection value 	2	0	0x0056	1
+S-OHP_M	Maximum output duration - hours 	2	0	0x0057	1
+S-OAH_L	Maximum output duration - minutes 	2	0	0x0058	1
+S-OAH_H	Maximum output AH Low 16-bit 	2	0	0x0059	1
+S-OWH_L	maximum output AH High 16-bit 	2	0	0x005A	1
+S-OWH_H	maximum output WH Low 16-bit 	2	0	0x005B	1
+S-OTP	maximum output WH 	2	0	0x005C	1
+S-INI	High 16-bit over- 	2	0	0x005D	1
+S-ETP	temperature protection value Power-on output sw	2	0	0x005E	1
+
+
