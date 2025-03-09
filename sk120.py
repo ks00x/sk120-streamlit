@@ -9,6 +9,10 @@ took code from https://github.com/lambcutlet/DPS5005_pyGUI
 # DPS3005 MODBUS Example By Luke (www.ls-homeprojects.co.uk) 
 #
 # Requires minimalmodbus library from: https://github.com/pyhys/minimalmodbus
+
+Note:
+The methods that end with '_mem' can change the values in one of the memory presets if the mem parameter [1-10] is given. 
+Otherwise they change the current settings
 '''		
 
 
@@ -405,53 +409,17 @@ if __name__ == '__main__':
 
     ser = Serial_modbus('/dev/ttyUSB0', 1, 115200, 8)
     dps = sk120(ser)	
+    
     #dps.on()
-
     print(dps.read_all())
 
     #print(dps._read('S-OTP'))
     #dps._write('B-LED',3)
     dps.beeper(0)
-    # print(dps.voltage(),dps.current(),dps.power())
-    # print(dps._read('T_IN'))
-    # print(dps.time())
-    # print(dps.power(),dps.wh(), dps.ah())
-    # print(dps.preset())
     
     print(dps.status(True))
     
-    #dps.off()
-    
-    # for k in range(10):
-    #     dps.preset_set(k)
-    #     print(k,': ',dps._read('V-SET'), dps._read('I-SET'))
-    # dps.preset_set(0)
-    #dps.reset_stastics()
     dps.off()
-
-    print(dps.parameter_dict())
-    dps.preset(0)
-    dps.reset_statistics()
-    dps.timer_mem(1)
-    print(dps.timer_mem())
-
-    print(dps.owh_mem())
-    dps.owh_mem(10.1)
-    print(dps.owh_mem())
-
-    dps.remove_protection()
-    dps.on()
     
-    # dps.sp_voltage_mem(13)
-    # print(dps.sp_voltage_mem())
-    # dps.preset(7)
-    # print(dps.sp_voltage_mem())
-    # dps.preset(3)
-    # print(dps.sp_voltage_mem())
-    #dps.sp_voltage_mem(11.65)
-    # print(dps.sp_voltage_mem())
-    # dps.sp_voltage_mem(13)
-    # dps.preset(0)
-    # print(dps.sp_voltage_mem())
-    # dps.preset(8)
-    # print(dps.sp_voltage_mem())
+    print(dps.parameter_dict())
+    

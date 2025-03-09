@@ -8,7 +8,7 @@
 
 The xy-sk120 module is very flexible and capable power supply regulator module. You must supply a DC voltage between 6-36V and the device can output voltages between 0-36V (up and down conversion). The power limits are 6A and 120W max.  It works as a standalone module, but it also features a modbus TTL interface. A regular 5V TTL usb serial adapter can be used to communicate with the device. There is a 4pin JST 1.25mm connector for this (-> hardware.md). There are other variations of this device with lesser and higher power specs that likely use a very similar firmware as the sk120. The information about the comunication protocol is scattered around the net. My starting point was this [project on github ](https://github.com/lambcutlet/DPS5005_pyGUI) which was made for a different model but has a very similar firmware.
 
-
+See also:  [hardware.md](hardware.md)
 
 ## usage
 
@@ -23,8 +23,6 @@ Then run the script:
 ```
 streamlit run sk120-app.py
 ```
-
-
 
 ## gui
 
